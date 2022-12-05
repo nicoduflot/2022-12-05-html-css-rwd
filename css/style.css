@@ -1,0 +1,30 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+.test-content-box div{
+    box-sizing: content-box;
+}
+
+.test-border-box div{
+    box-sizing: border-box;
+}
+
+.moitie{
+    width: 50%;
+    height: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    display: inline-block;
+}
+
+.deuxEm{
+    font-size: 2em;
+    border: 1px solid black;
+    padding: 20px;
+}
+.deuxRem{
+    font-size: 2rem;
+    border: 1px solid black;
+    padding: 20px;
+}

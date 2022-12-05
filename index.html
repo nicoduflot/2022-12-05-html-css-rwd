@@ -11,6 +11,7 @@
             - lien CSS
             - appel des fichiers JS
     -->
+    <link rel="stylesheet" href="./css/style.css" />
     <style>
         .rouge-gras{
             color: red;
@@ -126,9 +127,73 @@ fugit saepe vero sit?
                     <p>
                         Par défaut on utilise la balise img
                     </p>
-                    <img src=""
+                    <!-- 
+                    <img src="./images/city-black-n-white.png" alt="Dessin d'une ville en noir et blanc" />
+                    -->
                     <!-- 
                     <svg><polyline points="0,0 360,2.5 0,5" style="fill:#922610;stroke:#922610;"></polyline></svg>-->
+                    <p>
+                        Avec HTML5, il existe une balise faîte pour encadrer sémantiquement des documents, ou média, avec l'option d'y adjoindre une légende, la balise figure.
+                    </p>
+                    <figure>
+                        <!--
+                        <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="wallpaper fallout 4" />
+                        -->
+                        <figcaption>
+                            Wallpaper fallout 4
+                        </figcaption>
+                    </figure>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Les problèmes courants en CSS</h2>
+                </header>
+                <main>
+                    <p>
+                        Les tailles des éléments sont par défaut calculés sur le contenu des éléments.
+                        Si un paragraphe possède une bordure de 1px, une marge intérieure (padding) de 5px,
+                        et une largeur de 200px, la "boîte" affichée fera 212px de large bordures comprises.
+                    </p>
+                    <p>
+                        La définition par défaut du calcul "box-sizing" est "content-box", si on veut la taille calculée
+                        depuis les bordures, on doit la forcer à "border-box"
+                    </p>
+                    <div class="test-content-box">
+                        <div class="moitie">az</div>
+                        <div class="moitie">az</div>
+                    </div>
+                    <div class="test-border-box">
+                        <div class="moitie">az</div>
+                        <div class="moitie">az</div>
+                    </div>
+                    <p>
+                        Les tailles calculées : si vous voulez utiliser
+                        des cadratin (em), il est
+                        plus sûr d'utiliser les cadratins racine (rem)
+                        car il sont toujouts calculés
+                        par rapport au cadratin racine du user-agent (le style CSS du navigateur)
+                        et non pas le cadratin calculé du conteneur
+                    </p>
+                    <div class="deuxEm">
+                        deux em
+                        <div class="deuxEm">
+                            deux em
+                        </div>
+                    </div>
+                    <div class="deuxRem">
+                        deux rem
+                        <div class="deuxRem">
+                            deux rem
+                        </div>
+                    </div>
                 </main>
                 <footer>
                     <a href="./article.html" title="Lien vers l'article">
