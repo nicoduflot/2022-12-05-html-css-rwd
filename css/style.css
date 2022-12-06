@@ -134,3 +134,11 @@ body > footer ul{
 body > footer h4{
     text-align: center;
 }
+
+/*
+@media print {
+    body > nav, button, body > footer{
+        display: none;
+    }
+}
+*/
