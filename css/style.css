@@ -23,6 +23,13 @@ si 2em = 32 px, 1em = 16px
     --nav-princ-border-link: rgba(255, 255, 255);
     font-size: 1.1rem;
     line-height: 1.6rem;
+    --element-guter-size: 0.5rem;
+    --column-1-1: calc( 100% - calc( 2 * var(--element-guter-size)) );
+    --column-1-2: calc( 50% - calc( 2 * var(--element-guter-size)) );
+    --column-1-3: calc( 33% - calc( 2 * var(--element-guter-size)) );
+    --column-2-3: calc( 66% - calc( 2 * var(--element-guter-size)) );
+    --column-1-4: calc( 25% - calc( 2 * var(--element-guter-size)) );
+    --column-3-4: calc( 75% - calc( 2 * var(--element-guter-size)) );
 }
 
 /* déclarations générales*/
@@ -94,6 +101,13 @@ body > footer ul{
     line-height: 2.5rem;
 }
 
+body > nav ul li,
+body > footer ul li{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--nav-princ-border-link);
+}
+
 body > nav ul a,
 body > nav ul a:visited,
 body > footer ul a,
@@ -103,9 +117,11 @@ body > footer ul a:visited
     text-decoration: none;
     display: block;
     padding-left: 25px;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: var(--nav-princ-border-link);
+    padding-right: 25px;
+}
+
+body > nav ul li:last-child{
+    border-bottom: unset;
 }
 
 body > nav ul a:hover,
@@ -117,7 +133,9 @@ body > footer ul a:focus
     color: var(--nav-princ-bg-color);
 }
 
-body > main{
+body > main,
+body > nav > ul,
+body > footer > div{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -125,6 +143,8 @@ body > main{
 
 body > main > section article{
     padding: 1rem;
+    width: var(--column-1-1);
+    margin: var(--element-guter-size);
 }
 
 body > footer ul{
@@ -142,3 +162,103 @@ body > footer h4{
     }
 }
 */
+
+@media screen and (min-width: 576px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 720px;
+    }
+
+    body > nav > ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    body > nav ul li{
+        border-bottom: unset;
+    }
+
+}
+
+@media screen and (min-width: 992px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 960px;
+    }
+
+    body > main > section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > main > section article{
+        width: var(--column-1-2);
+    }
+
+    body > main > section > article:last-child:nth-of-type(2n + 1){
+        width: var(--column-1-1);
+    }
+}
+
+@media screen and (min-width: 1200px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 1140px;
+    }
+
+    body > main > section > article:last-child:nth-of-type(2n + 1){
+        width: var(--column-1-3);
+    }
+
+    body > main > section article{
+        width: var(--column-1-3);
+    }
+
+    body > main > section > article:last-child:nth-of-type(3n + 2){
+        width: var(--column-2-3);
+    }
+
+    body > main > section > article:last-child:nth-of-type(3n + 1){
+        width: var(--column-1-1);
+    }
+}
+
+@media screen and (min-width: 1400px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 1320px;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 1500px;
+    }
+
+    body > main > section article{
+        width: var(--column-1-4);
+    }
+
+    body > main > section > article:last-child:nth-of-type(4n + 3){
+        width: var(--column-1-2);
+    }
+
+    body > main > section > article:last-child:nth-of-type(4n + 2){
+        width: var(--column-3-4);
+    }
+}

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/style.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
     <style>
-        .rouge-gras{
+        .rouge-gras {
             color: red;
             font-weight: bold;
         }
@@ -48,8 +48,12 @@
                 </header>
                 <main>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consectetur deleniti corrupti inventore iure, fugit aut perspiciatis voluptatem, non, est tempora cumque magni ipsam repellendus unde possimus tenetur ad iusto? 
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis excepturi vel eius, facilis aut commodi fugit voluptatem accusamus at sequi expedita impedit, assumenda saepe necessitatibus libero eaque ratione doloremque ipsum.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consectetur deleniti corrupti
+                        inventore iure, fugit aut perspiciatis voluptatem, non, est tempora cumque magni ipsam
+                        repellendus unde possimus tenetur ad iusto?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis excepturi vel eius, facilis
+                        aut commodi fugit voluptatem accusamus at sequi expedita impedit, assumenda saepe necessitatibus
+                        libero eaque ratione doloremque ipsum.
                     </p>
                     <pre>
 Lorem ipsum dolor sit amet 
@@ -61,8 +65,24 @@ Ratione quidem sed quis
 temporibus ea distinctio, 
 fugit saepe vero sit?
                     </pre>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Les balises de type paragraphe</h2>
+                </header>
+                <main>
                     <p>
-                        Lorem, ipsum dolor <code>sit amet consectetur adipisicing elit</code>. Saepe eius animi pariatur alias temporibus quibusdam quia veritatis tempore sint error dolores fuga, accusamus dolorem magnam debitis. Corrupti porro ipsam maxime!
+                        Lorem, ipsum dolor <code>sit amet consectetur adipisicing elit</code>. Saepe eius animi pariatur
+                        alias temporibus quibusdam quia veritatis tempore sint error dolores fuga, accusamus dolorem
+                        magnam debitis. Corrupti porro ipsam maxime!
                     </p>
                     <p>
                         <code>
@@ -73,9 +93,13 @@ fugit saepe vero sit?
                         &copy; &trade;
                     </p>
                     <blockquote>
-                        <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, fugiat facere facilis dignissimos, quasi odio cupiditate quam vel sint voluptatem illo labore delectus nobis, est aperiam. Maiores harum esse amet! 
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, beatae aspernatur repellendus ullam animi aliquam labore voluptatem nam voluptatibus corporis impedit at dolorum esse facilis expedita voluptas repellat molestiae ad?</q><br />
-                        <cite>Jules  César</cite>
+                        <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, fugiat facere facilis
+                            dignissimos, quasi odio cupiditate quam vel sint voluptatem illo labore delectus nobis, est
+                            aperiam. Maiores harum esse amet!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, beatae aspernatur
+                            repellendus ullam animi aliquam labore voluptatem nam voluptatibus corporis impedit at
+                            dolorum esse facilis expedita voluptas repellat molestiae ad?</q><br />
+                        <cite>Jules César</cite>
                     </blockquote>
                 </main>
                 <footer>
@@ -93,15 +117,16 @@ fugit saepe vero sit?
                 <main>
                     <p>
                         IL existe quelques balises pour changer l'apparence du texte.
-                        En <b>gras</b> (b ou bold)  qui n'a pas d'influence sur le SEO, 
+                        En <b>gras</b> (b ou bold) qui n'a pas d'influence sur le SEO,
                         en revanche, la balise <strong>strong</strong>.
                     </p>
                     <p>
                         De même pour l'<i>italique</i> sans influence SEO, alors que l'<em>emphase</em>.
                     </p>
                     <p>
-                        La balise font <font color="#ff0000" size="6" face="Arial">texte</font> n'est plus utilisée, 
-                        à la place on utilise la balise span <span class="rouge-gras">ma span</span> associée à une ou plusieurs classes.
+                        La balise font <font color="#ff0000" size="6" face="Arial">texte</font> n'est plus utilisée,
+                        à la place on utilise la balise span <span class="rouge-gras">ma span</span> associée à une ou
+                        plusieurs classes.
                     </p>
                     <p>
                         On peut : <s>biffer</s>, <u>souligner</u>, <mark>Marquer</mark>.
@@ -130,7 +155,8 @@ fugit saepe vero sit?
                     </p>
                     <img src="./images/city-black-n-white.png" alt="Dessin d'une ville en noir et blanc" />
                     <p>
-                        Avec HTML5, il existe une balise faîte pour encadrer sémantiquement des documents, ou média, avec l'option d'y adjoindre une légende, la balise figure.
+                        Avec HTML5, il existe une balise faîte pour encadrer sémantiquement des documents, ou média,
+                        avec l'option d'y adjoindre une légende, la balise figure.
                     </p>
                     <figure>
                         <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="wallpaper fallout 4" />
@@ -153,6 +179,59 @@ fugit saepe vero sit?
                     </a>
                 </footer>
             </article>
+            <article>
+                <header>
+                    <h2>Les problèmes courants en CSS</h2>
+                </header>
+                <main>
+                    <p>
+                        Les tailles des éléments sont par défaut calculés sur le contenu des éléments.
+                        Si un paragraphe possède une bordure de 1px, une marge intérieure (padding) de 5px,
+                        et une largeur de 200px, la "boîte" affichée fera 212px de large bordures comprises.
+                    </p>
+                    <p>
+                        La définition par défaut du calcul "box-sizing" est "content-box", si on veut la taille calculée
+                        depuis les bordures, on doit la forcer à "border-box"
+                    </p>
+                    <div class="test-content-box">
+                        <div class="moitie">az</div>
+                        <div class="moitie">az</div>
+                    </div>
+                    <div class="test-border-box">
+                        <div class="moitie">az</div>
+                        <div class="moitie">az</div>
+                    </div>
+                    <p>
+                        Les tailles calculées : si vous voulez utiliser
+                        des cadratin (em), il est
+                        plus sûr d'utiliser les cadratins racine (rem)
+                        car il sont toujouts calculés
+                        par rapport au cadratin racine du user-agent (le style CSS du navigateur)
+                        et non pas le cadratin calculé du conteneur
+                    </p>
+                    <div class="deuxEm">
+                        deux em
+                        <div class="deuxEm">
+                            deux em
+                        </div>
+                    </div>
+                    <div class="deuxRem">
+                        deux rem
+                        <div class="deuxRem">
+                            deux rem
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
+        <section>
             <article>
                 <header>
                     <h2>Les problèmes courants en CSS</h2>
