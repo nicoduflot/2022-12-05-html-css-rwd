@@ -75,6 +75,14 @@ img{
     padding: 20px;
 }
 
+.center-swiper{
+    text-align: center;
+}
+
+.swiper-slide img{
+    max-height: 400px;
+}
+
 /* déclarations sur l'archi */
 
 body{
@@ -197,7 +205,7 @@ body > footer h4{
         width: 960px;
     }
 
-    body > main > section{
+    body > main > section:not(#carousel){
         display: flex;
         flex-wrap: wrap;
     }
