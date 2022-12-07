@@ -7,17 +7,78 @@ form{
 form p{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 form label{
     width: 100%;
 }
 
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form select
+{
+    width: 100%;
+    height: 2rem;
+}
+
+form input[type="color"],
+form input[type="range"]{
+    width: 25%;
+}
+
+form p span{
+    width: 25%;
+    margin-left: 20%;
+    text-align: right;
+}
+
+form textarea{
+    width: 100%;
+    height: 25vh;
+}
+
+.radio-check label{
+    width: 100%;
+}
+
+.radio-check label[for]{
+    width: 75%;
+}
+
+.radio-check input{
+    width: 20%;
+}
+
+
 @media screen and (min-width: 576px){
     
 }
 
 @media screen and (min-width: 768px){
+    form{
+        width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    form label{
+        width: 50%;
+    }
+    
+    form input[type="text"],
+    form input[type="tel"],
+    form input[type="email"],
+    form select
+    {
+        width: 50%;
+    }
+
+    form label[for="couleur"],
+    form label[for="luminosite"]{
+        width: 20%;
+    }
     
 }
 
