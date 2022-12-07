@@ -76,8 +76,14 @@ form textarea{
     }
 
     form label[for="couleur"],
-    form label[for="luminosite"]{
+    form label[for="luminosite"],
+    form label[for="dateLimiteEnvoi"]
+    {
         width: 20%;
+    }
+
+    form input[type="date"]{
+        margin-right: 60%;
     }
     
 }
