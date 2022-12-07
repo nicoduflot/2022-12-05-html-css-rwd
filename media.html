@@ -12,6 +12,7 @@
             - appel des fichiers JS
     -->
     <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/media.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
 </head>
 <body>
@@ -31,13 +32,28 @@
         </ul>
     </nav>
     <main>
+        <h2>Les media</h2>
         <section>
             <article>
                 <header>
-                    <h2></h2>
+                    <h2>Vidéos hébergées sur le site</h2>
                 </header>
                 <main>
-                    
+                    <p>
+                        on utilise la balise &lt;video&gt;
+                    </p>
+                    <p>
+                        la source de la vidéo est directement intégrée dans la balise, attention au format, si le navigateur ne peut pas lire ce format la vidéo ne s'affiche pas
+                    </p>
+                    <video src="./media/videos/Fallout-4-Launch-Trailer.mp4" controls muted preload="auto" poster="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg"></video>
+                    <p>
+                        Ici la source de la vidéo est intégrée dans des balises sources contenant différents formats de la même vidéo, 
+                        cela permet si le navigateur ne lit pas certains formats de lui permettre d'afficher le format qu'il est capable de lire.
+                    </p>
+                    <video controls muted>
+                        <source src="./media/videos/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                        <source src="./media/videos/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                    </video>
                 </main>
                 <footer>
                     <a href="./article.html" title="Lien vers l'article">
@@ -49,10 +65,21 @@
             </article>
             <article>
                 <header>
-                    <h2></h2>
+                    <h2>Vidéos hébergées sur un site tier</h2>
                 </header>
                 <main>
-                    
+                    <p>
+                        Des sites tels que Youtube et dailymotion donnent la possibilité 
+                        d'incruster leurs vidéos sur nos sites, en utilisant la balise iframe.<br />
+                        L'iframe est une balise qui permet d'appeler une page 
+                        d'un autre site (ou du site actuel) dans un cadre délimité.<br />
+                        Il faut toutefois que le site ciblé autorise les iframes
+                    </p>
+                    <figure class="video">
+                        <iframe class="video" src="https://www.youtube.com/embed/C86vOzqhPUc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </figure>
+                    <hr />
+                    <figure class="video"> <iframe class="video" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/xr5ef" width="100%" height="100%" allowfullscreen title="Dailymotion Video Player" > </iframe> </figure>
                 </main>
                 <footer>
                     <a href="./article.html" title="Lien vers l'article">
@@ -64,10 +91,29 @@
             </article>
             <article>
                 <header>
-                    <h2></h2>
+                    <h2>Ifram</h2>
                 </header>
                 <main>
-                    
+                    <ul>
+                        <li>
+                            <a href="./documents/texte.txt" target="test">Test</a>
+                        </li>
+                        <li>
+                            <a href="./documents/CRAM.pdf" target="test">CRAM</a>
+                        </li>
+                        <li>
+                            <a href="./article.html" target="test">Article.html</a>
+                        </li>
+                        <li>
+                            <a href="./media/audio/diablo_town.mp3" target="test">Audio test</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/B9UrGpCaisI" target="test">Audio test</a>
+                        </li>
+                    </ul>
+                    <figure class="video portrait">
+                        <iframe class="video" name="test" src="./documents/CRAM.pdf"></iframe>
+                    </figure>
                 </main>
                 <footer>
                     <a href="./article.html" title="Lien vers l'article">
