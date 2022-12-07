@@ -14,6 +14,21 @@
     <link rel="stylesheet" href="./css/style.css" media="screen" />
     <link rel="stylesheet" href="./css/form.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('#couleur').addEventListener('change', function(){
+                let colorValue = document.querySelector('#couleur').value;
+                console.log(colorValue);
+                document.querySelector('#colorSelected').innerHTML = colorValue;
+            });
+            
+            document.querySelector('#luminosite').addEventListener('change', function(){
+                let lumenValue = document.querySelector('#luminosite').value;
+                console.log(lumenValue);
+                document.querySelector('#lumSelected').innerHTML = lumenValue;
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -78,15 +93,127 @@
                                 <label for="nom">Nom :</label> <input type="text" name="nom" id="nom" aria-describedby="info-nom" autofocus required placeholder="Votre nom ici..." />
                             </p>
                             <div id="info-nom">
-                                Veuillez entrez votre nom dans ce champs
+                                Veuillez entrez votre nom dans ce champs, ce champs est obligatoire...
+                            </div>
+                            <p>
+                                <label for="prenom">prénom :</label> <input type="text" name="prenom" id="prenom" aria-describedby="info-prenom" placeholder="Votre prénom ici..." />
+                            </p>
+                            <div id="info-prenom">
+                                Veuillez entrez votre prénom dans ce champs
+                            </div>
+                            <p>
+                                <label for="email">
+                                    Email :
+                                </label>
+                                <input type="email" name="email" id="email" placeholder="Entrez votre email"
+                aria-describedby="info-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,12}$"
+                                    required />
+                            </p>
+                            <div class="form-info" id="info-email">
+                                Dans ce champs, indiquez votre email. <br />
+                                au format identifiant@societe.domaine
+                            </div>
+                            <p>
+                                <label for="telephone">
+                                    Téléphone :
+                                </label>
+                                <input type="tel" name="telephone" id="telephone" placeholder="Entrez votre téléphone"
+                                    aria-describedby="info-telephone" />
+                            </p>
+                            <div class="form-telephone" id="info-telephone">
+                                Dans ce champs, indiquez votre téléphone.
                             </div>
                         </fieldset>
-                        <button type="submit" name="submitForm" value="Envoyer">
-                            Envoyer le formulaire
-                        </button>
-                        <button type="reset">
-                            Vider le formulaire
-                        </button>
+                        <fieldset>
+                            <legend>
+                                Votre demande d'échantillon
+                            </legend>
+                            <p>
+                                <label for="besoin">
+                                    Description de votre besoin
+                                </label>
+                                <textarea name="besoin" id="besoin" placeholder="Décrivez votre besoin"></textarea>
+                            </p>
+                            <p>
+                                <label for="materiaux">
+                                    Type de tissus
+                                </label>
+                                <select name="materiaux" id="materiaux">
+                                    <option value="invalid">
+                                        Choix du type de tissu
+                                    </option>
+                                    <optgroup label="Toile occultante">
+                                        <option value="M1">Occultant M1</option>
+                                        <option value="M2">Occultant M2</option>
+                                        <option value="M4">Occultant M4</option>
+                                    </optgroup>
+                                    <optgroup label="Toile anti-feu">
+                                        <option value="A1">Anti-feu A1</option>
+                                        <option value="A2">Anti-feu A2</option>
+                                        <option value="A4">Anti-feu A4</option>
+                                    </optgroup>
+                                    <optgroup label="anti-feu imperméables">
+                                        <option value="A2-1">Anti-feu A2-1</option>
+                                        <option value="A2-2">Anti-feu A2-2</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="couleur">Couleur</label>
+                                <input type="color" name="couleur" id="couleur" aria-describedby="info-couleur" />
+                                <span id="colorSelected"></span>
+                            </p>
+                            <div class="form-info " id="info-couleur">
+                                Dans ce champs, entrez l'adresse de votre site web.
+                            </div>
+                            <p>
+                                <label for="luminosite">Luminosité</label>
+                                <input type="range" name="luminosite" id="luminosite" min="0" max="5" step="0.5"
+                                    aria-describedby="info-luminosite" />
+                                <span id="lumSelected"></span>
+                            </p>
+                            <div class="form-info " id="info-luminosite">
+                                Dans ce champs, indiquez la luminosité du site : 0 pour très sombre à 5 pour très
+                                lumineux.
+                            </div>
+                            <p>
+                                <label for="dateLimiteEnvoi">Date Limite</label>
+                                <input type="date" name="dateLimiteEnvoi" id="dateLimiteEnvoi"
+                                    aria-describedby="info-dateLimiteEnvoi" />
+                            </p>
+                            <div class="form-info " id="info-dateLimiteEnvoi">
+                                Dans ce champs, indiquez la date après laquelle vous voulez l'échantillon
+                            </div>
+                            <p class="radio-check">
+                                <label>
+                                    Les moyens pour vous contacter
+                                </label>
+                                <input type="checkbox" name="contact-mail" id="contact-mail" />
+                                <label for="contact-mail">Par email</label>
+                                <input type="checkbox" name="contact-telephone" id="contact-telephone" />
+                                <label for="contact-telephone">Par téléphone</label>
+                                <input type="checkbox" name="contact-courrier" id="contact-courrier" />
+                                <label for="contact-courrier">Par courrier</label>
+                            </p>
+                            <p class="radio-check">
+                                <label>La demande est pour :</label>
+                                <input type="radio" name="type-personne" id="personne-physique" value="physique" checked
+                                    aria-checked="true" />
+                                <label for="personne-physique">Personne physique</label>
+                                <input type="radio" name="type-personne" id="personne-morale" value="morale" />
+                                <label for="personne-morale">Personne morale</label>
+                            </p>
+                        </fieldset>
+                        <input type="hidden" name="cache" id="cache"
+                            value="ceci est une info cachée à la vue de l'utilisateur" />
+                        <p>
+                            <button type="submit" name="submitForm" value="Envoyer">
+                                Envoyer le formulaire
+                            </button>
+                            <button type="reset">
+                                Vider le formulaire
+                            </button>
+                        </p>
                     </form>
                 </main>
                 <footer>

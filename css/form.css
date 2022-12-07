@@ -1,0 +1,38 @@
+/* css pour le formaulaire, a appeler avec le feuillet style */
+
+form{
+    width: 100%;
+}
+
+form p{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form label{
+    width: 100%;
+}
+
+@media screen and (min-width: 576px){
+    
+}
+
+@media screen and (min-width: 768px){
+    
+}
+
+@media screen and (min-width: 992px){
+
+}
+
+@media screen and (min-width: 1200px){
+
+}
+
+@media screen and (min-width: 1400px){
+    
+}
+
+@media screen and (min-width: 1600px){
+    
+}
