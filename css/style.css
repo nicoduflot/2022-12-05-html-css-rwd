@@ -30,6 +30,10 @@ si 2em = 32 px, 1em = 16px
     --column-2-3: calc( 66% - calc( 2 * var(--element-guter-size)) );
     --column-1-4: calc( 25% - calc( 2 * var(--element-guter-size)) );
     --column-3-4: calc( 75% - calc( 2 * var(--element-guter-size)) );
+    --information-width: 500px;
+    --information-margin-right: 20px;
+    --information-tbody-tr-bg: rgb(214, 214, 214);
+    --information-thead-tr-bg: rgb(131, 130, 130);
 }
 
 /* déclarations générales*/
@@ -81,6 +85,60 @@ img{
 
 .swiper-slide img{
     max-height: 400px;
+}
+
+main.article{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.information figure{
+    text-align: center;
+}
+
+.information table{
+    border-collapse:collapse;
+    width: 100%;
+  }
+
+.information tbody tr:nth-of-type(odd){
+    background-color: var(--information-tbody-tr-bg);
+}
+
+.information thead tr{
+    background-color: var(--information-thead-tr-bg);
+    color: white;
+}
+
+.information tbody th{
+    text-align: left;
+}
+
+.information td{
+    text-align: right;
+}
+
+figure.left{
+    float: left;
+    margin: unset;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background-color: black;
+}
+
+figure.right{
+    float: right;
+    margin: unset;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    background-color: black;
+}
+
+figure.left figcaption,
+figure.right figcaption{
+    background-color: white;
 }
 
 /* déclarations sur l'archi */
@@ -199,6 +257,35 @@ body > footer h4{
 }
 
 @media screen and (min-width: 992px){
+
+    figure.left, 
+    figure.right{
+        max-width: 250px;
+    }
+
+    figure.right{
+        text-align: center;
+    }
+
+    figure.right figcaption{
+        text-align: left;
+    }
+
+    main.article {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+    .information{
+        width: var(--information-width);
+        margin-right: var(--information-margin-right);
+        font-size: 0.9rem;
+    }
+
+    .article .contenu{
+        width: calc( 100% - calc( var(--information-margin-right) + var(--information-width) ) );
+    }
+
     body > main,
     body > nav > ul,
     body > footer > section{
@@ -240,6 +327,12 @@ body > footer h4{
 }
 
 @media screen and (min-width: 1200px){
+
+    figure.left, 
+    figure.right{
+        max-width: 350px;
+    }
+
     body > main,
     body > nav > ul,
     body > footer > section{
@@ -269,6 +362,11 @@ body > footer h4{
     body > footer > section{
         width: 1320px;
     }
+
+    figure.left, 
+    figure.right{
+        max-width: 400px;
+    }
 }
 
 @media screen and (min-width: 1600px){
@@ -288,5 +386,10 @@ body > footer h4{
 
     body > main > section > article:last-child:nth-of-type(4n + 2){
         width: var(--column-3-4);
+    }
+
+    figure.left, 
+    figure.right{
+        max-width: 500px;
     }
 }
