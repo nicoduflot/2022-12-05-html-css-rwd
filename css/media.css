@@ -18,3 +18,7 @@ iframe.video{
     top:0px;
     overflow:hidden;
 }
+
+audio, video{
+    background-color: red;
+}
