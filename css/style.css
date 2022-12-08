@@ -46,9 +46,13 @@ si 2em = 32 px, 1em = 16px
     box-sizing: border-box;
 }
 
-h1{
+h1, .txtFg{
     margin: 0;
     font-family: 'edosz';
+}
+
+.txtFg{
+    font-size: 1.5rem;
 }
 
 img, video{
