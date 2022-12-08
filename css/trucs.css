@@ -1,0 +1,79 @@
+.cercle{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    background-image: url('../images/pip-boy.svg');
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border-width: 3px;
+    border-color: cadetblue;
+    border-style: solid;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.vignette{
+    width: 52px;
+    height: 52px;
+    border: 1px solid #000;
+    background-image: url('../images/multi-vignettes-sm-01.png');
+    margin: 10px;
+}
+
+.avatar-01{
+    background-position-x: 0;
+    background-position-y: 0;
+}
+
+.avatar-02{
+    background-position-x: 50px;
+    background-position-y: 0;
+}
+
+.avatar-03{
+    background-position-x: 0;
+    background-position-y: 50px;
+}
+
+.avatar-04{
+    background-position-x: 50px;
+    background-position-y: 50px;
+}
+
+.triangle-rouge{
+    width: 0;
+    height: 0;
+    --taille-totale-face: 50px;
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: calc(  var(--taille-totale-face) / 2 ) ;
+    border-right-width: calc(  var(--taille-totale-face) / 2 ) ;
+    border-bottom-width: calc(  var(--taille-totale-face) * 0.866 ) ;
+    border-bottom-color: red;
+    margin: 10px;
+}
+
+p:nth-last-of-type(odd):before{
+    content: "";
+    display: inline-block;
+    --taille-totale-face: 0.8rem;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: calc(  var(--taille-totale-face) / 2 ) ;
+    border-bottom-width: calc(  var(--taille-totale-face) / 2 ) ;
+    border-left-width: calc(  var(--taille-totale-face) * 0.866 ) ;
+    border-left-color: red;
+}
+
+p:nth-last-of-type(even):before{
+    content: "";
+    display: inline-block;
+    --taille-totale-face: 0.8rem;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: calc(  var(--taille-totale-face) / 2 ) ;
+    border-bottom-width: calc(  var(--taille-totale-face) / 2 ) ;
+    border-left-width: calc(  var(--taille-totale-face) * 0.866 ) ;
+    border-left-color: darkgreen;
+}

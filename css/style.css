@@ -1,4 +1,7 @@
-
+@import url('./edosz.css');
+/*
+tous les imports de css dans un autre CSS sont a déclarer ABSOLUMENT en début de fichier
+*/
 /*
 dimension les plus vues en web :
 px      =>  Pixel
@@ -34,6 +37,7 @@ si 2em = 32 px, 1em = 16px
     --information-margin-right: 20px;
     --information-tbody-tr-bg: rgb(214, 214, 214);
     --information-thead-tr-bg: rgb(131, 130, 130);
+    --heading-font: 'edosz';
 }
 
 /* déclarations générales*/
@@ -44,6 +48,7 @@ si 2em = 32 px, 1em = 16px
 
 h1{
     margin: 0;
+    font-family: 'edosz';
 }
 
 img, video{
