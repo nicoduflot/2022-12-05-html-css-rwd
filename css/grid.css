@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body > main {
+  background-color: black;
+  color: greenyellow;
+}
+
+main{
+    padding: 0.5rem;
+}
+
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1rem;
+    grid-auto-rows: auto;
+}
+
+.grid-div{
+    border: 3px solid darkgreen;
+}
+
+@media screen and (min-width: 576px){
+    .grid-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #cell-1{
+        grid-column: span 2;
+    }
+    
+    #cell-2{
+        grid-column: span 2;
+    }
+    
+    #cell-11{
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .grid-wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #cell-1{
+        grid-column: span 3;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .grid-wrapper{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #cell-1{
+        grid-column: span 2;
+    }
+
+    #cell-4{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    .grid-wrapper{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .grid-wrapper{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    } 
+}
+
+@media screen and (min-width: 1600px){
+    .grid-wrapper{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
