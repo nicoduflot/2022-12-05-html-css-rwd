@@ -2,8 +2,8 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formation HTML5 CSS3</title>
     <!-- Commentaire en HTML -->
     <!--
@@ -11,9 +11,23 @@
             - lien CSS
             - appel des fichiers JS
     -->
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" media="all" />
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/animation.css" media="screen" />
+    <link rel="stylesheet" href="./css/animate-css.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+            let imageChange = document.querySelector('img.click-change');
+            imageChange.addEventListener('click', function(){
+                imageChange.classList.toggle('flip');
+            });
+        });
+    </script>
 </head>
+
 <body>
-    <header>
+    <header id="top">
         <h1>Formation HTML5 - CSS3 - RWD</h1>
     </header>
     <nav>
@@ -28,6 +42,378 @@
             <li><a href="./bootstrap.html">Bootstrap</a></li>
         </ul>
     </nav>
-    
+    <main>
+        <section>
+            <article>
+                <header>
+                    <h2 class="animate__animated animate__bounce animate__infinite">Les télétubbies</h2>
+                </header>
+                <main class="article">
+                    <div class="information">
+                        <aside>
+                            <h3>Les Télétubbies</h3>
+                            <figure>
+                                <img class="translation" src="./images/Les_Télétubbies.png" alt="Description de l'image Les Télétubbies.png." />
+                                <figcaption>
+                                    logo de la série Télétubbies
+                                </figcaption>
+                            </figure>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Données clés</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Titre original</th>
+                                        <td>Teletubbies</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Genre </th>
+                                        <td>émission pour enfant</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Création</th>
+                                        <td>Anne Wood et Andrew Davenport</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Production</th>
+                                        <td>Ragdoll Productions</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pays d'origine</th>
+                                        <td>Royaume-Uni</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Chaîne d'origine</th>
+                                        <td>BBC</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nb. de saisons</th>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nb. d'épisodes</th>
+                                        <td>365</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Durée</th>
+                                        <td>25 minutes</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Diff. originale</th>
+                                        <td>30 mars 1997 – 5 janvier 2001</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Site web</th>
+                                        <td>
+                                            <a href="http://www.teletubbies.co.uk" target="_blank">http://www.teletubbies.co.uk</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </aside>
+                        <aside>
+                            <h3>Informations complémentaires</h3>
+                            <ul>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque soluta harum debitis consequuntur at, ab a expedita aut fugiat placeat dolor. Expedita omnis, maxime dignissimos fugiat voluptatem suscipit quidem nam!
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque soluta harum debitis consequuntur at, ab a expedita aut fugiat placeat dolor. Expedita omnis, maxime dignissimos fugiat voluptatem suscipit quidem nam!
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque soluta harum debitis consequuntur at, ab a expedita aut fugiat placeat dolor. Expedita omnis, maxime dignissimos fugiat voluptatem suscipit quidem nam!
+                                </li>
+                            </ul>
+                        </aside>
+                        <aside>
+                            <h3>Informations complémentaires</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis in consectetur eos repellat a! Ducimus quasi ullam accusantium ipsum fuga itaque nisi est rem maxime amet obcaecati, consequuntur quidem illum.
+                            </p>
+                            <ul>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque soluta harum debitis consequuntur at, ab a expedita aut fugiat placeat dolor. Expedita omnis, maxime dignissimos fugiat voluptatem suscipit quidem nam!
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="contenu">
+                        <hr />
+                        <figure class="left">
+                            <img class="scale" src="./images/teletubbies.jpg" />
+                            <figcaption>
+                                Les télétubbies en vadrouille
+                            </figcaption>
+                        </figure>
+                        <p>
+                            Les Télétubbies (Teletubbies) est une
+                            série télévisée britannique pour la jeunesse en 365
+                            épisodes de 25 minutes, créée par Anne Wood et Andrew Davenport, produite par Ragdoll
+                            Productions. La série originale a été diffusée à partir du 31 mars 1997 jusqu'au 5 janvier
+                            2001 sur le réseau BBC et destinée principalement aux tout-petits de 1 à 4 ans.
+                        </p>
+                        <p>
+                            Au Québec, la série a été diffusée à partir du 7 septembre 1998 à Télé-Québec1, en France à
+                            partir du 11 octobre 1998 sur Canal+2 jusqu'au 30 août 2002 puis sur TiJi en Belgique sur la
+                            RTBF et en Suisse sur la Télévision suisse romande.
+                        </p>
+                        <p>
+                            Une reprise de la série a été lancée le 9 novembre 2015 sur CBeebies et Nick Jr. aux
+                            États-Unis. En France, elle est diffusée sur Gulli depuis 2016 et au Canada sur Télémagino3.
+                        </p>
+                        <p>
+                            Une deuxième reboot de la série sera diffusée sur Netflix en novembre 20224.
+                        </p>
+                        <h3>Synopsis</h3>
+                        <hr />
+                        <p>
+                            Cette série destinée aux très jeunes enfants met en scène les aventures de quatre
+                            personnages très colorés prénommés Tinky Winky, Dipsy, Laa-Laa et Po, tous possédant une
+                            télévision sur le ventre et une antenne sur la tête leur permettant de capter des émissions
+                            pour enfants, d'où leur surnom de Télétubbies. Ils vivent à Télétubbyland, au sein d'un dôme
+                            futuriste — le « Tubbydome Supertronic » — localisé en plein cœur d'une prairie, au milieu
+                            de collines entièrement couvertes de pelouses et peuplées de lapins, de fleurs parlantes,
+                            ainsi que de haut-parleurs eux aussi parlants et sortant du sol tels des périscopes ;
+                            quelques arbres font également partie du paysage, à l'intérieur desquels des chants
+                            d'oiseaux se font entendre. Tels des enfants en bas âge, les Télétubbies communiquent par le
+                            biais d'un langage intrinsèquement limité, saluant couramment le jeune téléspectateur par
+                            l'expression « Eh ! Oh ! » qu'ils emploient pour dire « bonjour ». Ces personnages se
+                            nourrissent de TubbyToast — des biscuits de forme circulaires arborant un sourire à la
+                            manière d'un Smiley — et de TubbyDélice, une boisson rose qu’ils consomment dans un bol à
+                            paille. Chaque épisode est conté par un narrateur.
+                        </p>
+                        <p>
+                            Dans la série de 2016 apparaît « Dub dub », un monte charge aménagé au centre du dôme, ce
+                            dernier ayant été modernisé en parallèle avec entre autres l'application d'une décoration
+                            aux teintes plus contemporaines.
+                        </p>
+                        <h3>Distribution</h3>
+                        <hr />
+                        Acteurs et voix originales
+                        <hr />
+                        <figure class="right">
+                            <img src="./images/Teletubbies.webp" />
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laboriosam ad in amet mollitia voluptatum rem nobis omnis dicta temporibus possimus quaerat, incidunt repudiandae beatae corporis perspiciatis doloribus aut! Sit?
+                            </figcaption>
+                        </figure>
+                        <ul>
+                            <li>Dave Thompson, Izzane Mark Calaway et Simon Shelton : Tinky Winky</li>
+                            <li>John Simmit : Dipsy</li>
+                            <li>Nikky Smedley : Laa-Laa</li>
+                            <li>Pui Fan Lee : Po</li>
+                            <li>Jess Smith : Bébé Soleil</li>
+                            <li>Matthew Wood : Noo-Noo</li>
+                            <li>Tim Whitnall : le narrateur</li>
+                        </ul>
+
+                        Voix françaises
+                        <hr />
+                        <ul>
+                            <li>Rafaël Troch : Tinky Winky (1re voix)</li>
+                            <li>Frédéric Meaux : Tinky Winky (2e voix) et voix additionnelles</li>
+                            <li>Jean-Paul Clerbois : Dipsy</li>
+                            <li>Cécile Florin : Laa-Laa et voix additionnelles</li>
+                            <li>Fanny Roy : Po</li>
+                            <li>Bruno Georis : le narrateur</li>
+                            <li>Nessym Guetat : voix additionnelles</li>
+                            <li>Colette Sodoyez : voix additionnelles</li>
+                        </ul>
+
+                        Voix québécoises
+                        <hr />
+                        <ul>
+                            <li>Bernard Fortin : Tinky Winky</li>
+                            <li>Daniel Lesourd : Dipsy</li>
+                            <li>Aline Pinsonneault : Laa-Laa</li>
+                            <li>Chantal Baril : Po</li>
+                            <li>Jacques Lavallée : le narrateur</li>
+                        </ul>
+                        <h3>
+                            Personnages
+                        </h3>
+                        <hr />
+                        <h4>
+                            Les quatre Télétubbies
+                        </h4>
+                        <hr />
+                        <p>
+                            Les Télétubbies arborent chacun leur propre couleur de corps qui permet aux enfants de les
+                            distinguer avec aisance, ainsi qu'une antenne sur la tête (servant vraisemblablement à la
+                            captation des émissions télévisées diffusées sur leur télévision ventrale), dont la forme
+                            varie en fonction des individus. Tous possèdent un accessoire de prédilection avec lequel
+                            ils se distraient régulièrement au cours de leurs temps de loisirs.
+                        </p>
+                        <h5>
+                            Tinky Winky
+                        </h5>
+                        <hr />
+                        <p>
+                            De couleur [violet], il est le plus grand des Télétubbies et considéré comme le leader des
+                            enfants. Il possède au-dessus de la tête une antenne triangulaire inversée ainsi qu'un sac à
+                            main de couleur rouge en guise d'accessoire favori. C'est un garçon6. Il est également le
+                            plus doux et affectueux de la bande ; ainsi, il s'émeut facilement et aime flairer le parfum
+                            des fleurs qui ornent naturellement la prairie. Particulièrement attaché à son sac à main
+                            rouge, il l'emporte partout avec lui lors de ses promenades à l'air libre. Il chante souvent
+                            la chanson des Télétubbies et a un bon pas de danse. Toutefois, sa relative maladresse le
+                            conduit inéluctablement à trébucher sur le dos. Tinky Winky aime beaucoup Po, le petit
+                            Télétubby. Rajoutons qu'il est celui qui parle le moins correctement (Po exceptée) et a la
+                            voix la plus grave.
+                        </p>
+                        <div class="espace-animation">
+                            <div class="cercle-animation animation">
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+                            </div>
+                        </div>
+                        <h5>
+                            Dipsy
+                        </h5>
+                        <hr />
+                        <p>
+                            Plus petit que Tinky Winky, il est vert et la peau de son visage est légèrement plus foncée
+                            que celle de ses congénères. C’est un garçon. Son antenne est droite et il possède un
+                            haut-de-forme blanc tacheté de noir à la manière de la robe d'une vache, avec un vide au
+                            sommet du chapeau pour laisser dépasser ladite antenne. Il semble être le plus énergique des
+                            Télétubbies et adore faire rire ses amis.
+
+                        </p>
+                        <h5>
+                            Laa-Laa
+                        </h5>
+                        <hr />
+                        <p>
+                            C’est une fille, plus petite que Dipsy, de couleur jaune. Son antenne forme une boucle et
+                            elle possède un imposant ballon orange. De tous les membres du groupe, elle est celle qui
+                            apprécie le plus de pratiquer la danse, étant la seule à avoir revêtu plus d'une fois un
+                            tutu blanc. Elle semble être la plus joviale des Télétubbies et est souvent de bonne humeur.
+                        </p>
+                        <h5>
+                            Po
+                        </h5>
+                        <hr />
+                        <p>
+                            C’est la benjamine du groupe, ayant approximativement l'âge d'un bambin, et donc la plus
+                            petite en taille. Elle est rouge et sa tête est pourvue d'une antenne décrivant un cercle.
+                            Son objet favori est une trottinette rose et bleue dont elle peine à se servir proprement.
+                            Elle semble être la plus gourmande des Télétubbies.
+                        </p>
+                        <p>
+                            Outre leurs caractéristiques physiques communes, le principal point commun des Télétubbies
+                            réside dans leur affection réciproque, laquelle se traduit principalement par de fréquents «
+                            gros câlins » (« big hugs ») qu'ils se font mutuellement. Ces accolades collectives
+                            s'observent couramment au terme de chaque épisode.
+                        </p>
+                        <h4>
+                            Personnages secondaires
+                        </h4>
+                        <hr />
+                        <figure class="left">
+                            <img class="click-change" src="./images/alice-cards-design.jpg" />
+                            <figcaption>
+                                Alice qu'est là mais on sait pas pourquoi
+                            </figcaption>
+                        </figure>
+                        <ul>
+                            <li>
+                                Noo-Noo l’aspirateur (prononcé « Nou-nou ») : il s'agit d'un imposant robot aspirateur
+                                chargé d'effectuer le ménage derrière les Télétubbies. Contrairement à ces derniers qui
+                                sortent quotidiennement de leur dôme en journée, il demeure en permanence à l'intérieur
+                                du foyer. Il lui arrive régulièrement de se mettre tous les Télétubbies à dos en
+                                aspirant un ou plusieurs objets pour lesquels ils manifestent de l'intérêt, à la suite
+                                de quoi les quatre se lancent dans une course poursuite contre lui à travers leur maison
+                                en criant « Vilain Noo-Noo ! » à tour de rôle tout en décrivant systématiquement une
+                                trajectoire circulaire. Passé un délai d'approximativement une minute, il finit
+                                inéluctablement par céder en freinant afin de recracher son contenu. Originellement
+                                coloré en bleu, il est devenu orangé dans la version de 2016. C'est d'ailleurs à partir
+                                de cette dernière qu'il a réellement pris goût au nettoyage, ce à quoi les Télétubbies
+                                lui répondent « Merci Noo-Noo ! ».
+                            </li>
+                            <li>
+                                Bébé Soleil : représenté par un disque solaire pourvu d'un visage de bébé, il marque
+                                avec son lever et son coucher le début et la fin de l’épisode.
+                            </li>
+                            <li>
+                                Les haut-parleurs : télescopiques, ils émergent régulièrement du sol à n'importe quel
+                                emplacement (via un orifice circulaire à l'ouverture automatique) afin de proposer des
+                                annonces et des emplois du temps aux Télétubbies.
+                            </li>
+                            <li>
+                                Les lapins : parfois source d'intérêt pour les Télétubbies lors de leurs sorties, ils
+                                peuplent la prairie au sein duquel leur dôme est établi.
+                            </li>
+                            <li>
+                                Le Tubby Phone : il fait son apparition dans la nouvelle série de 2016 et il annonce un
+                                des Télétubbies à son contact.
+                            </li>
+                            <li>
+                                Les Mini Tubbies : apparus dans la nouvelle série de 2016, ils sont toujours logés
+                                derrière une clôture. Parfois, les Télétubbies jouent avec eux et leur disent bonne
+                                nuit. Au nombre de huit, ils se nomment Duggle Dee (rose/violet), Daa Daa (vert), Baa
+                                (bleu), Nin (violet), RuRu (orange), Mi-Mi (bleu turquoise), Ping (rose) et Umby Pumby
+                                (jaune). Ils sont réalisés en images de synthèse.
+                            </li>
+                            <li>
+                                Les fleurs parlantes : bien que dépourvues de visage, elles possèdent la faculté de
+                                s'exprimer par la parole et s'en servent parfois pour commenter les situations
+                                auxquelles elles sont témoins, ce à quoi les Télétubbies ne prêtent pas attention
+                                cependant.
+                            </li>
+                        </ul>
+
+                    </div>
+                </main>
+                <footer>
+
+                </footer>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <div>
+                <h4>Sitemap</h4>
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">Accueil</a></li>
+                        <li><a href="./article.html">Article</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./media.html">Media</a></li>
+                        <li><a href="./animation.html">Animations CSS</a></li>
+                        <li><a href="./trucs.html">Des trucs en CSS</a></li>
+                        <li><a href="./grid.html">Grid CSS</a></li>
+                        <li><a href="./bootstrap.html">Bootstrap</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <h4>Liens institutionnels</h4>
+                <nav>
+                    <ul>
+                        <li><a href="#">CGV</a></li>
+                        <li><a href="#">CGU</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">Qui sommes-nous</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <h4>Autres liens</h4>
+                <nav>
+                    <ul>
+                        <li><a href="#">bla bli blu</a></li>
+                        <li><a href="#">bla bli blu</a></li>
+                        <li><a href="#">bla bli blu</a></li>
+                        <li><a href="#">bla bli blu</a></li>
+                        <li><a href="#">bla bli blu</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </footer>
 </body>
+
 </html>

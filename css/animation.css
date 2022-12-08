@@ -1,0 +1,85 @@
+
+
+.translation{
+    transition: transform 0.5s, background-color 3s 0.5s, box-shadow 1s 3.5s;
+}
+
+.translation:hover{
+    transform: translate(30px, -30px);
+    background-color: bisque;
+    box-shadow: 0px 0px 20px black;
+}
+
+.scale{
+    transition: transform 2s ease-in, background-color 1s, box-shadow 0.5s ease-out;
+}
+
+.scale:hover{
+    background-color: bisque;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 20px black;
+}
+
+.espace-animation{
+    width: 100%;
+    position: relative;
+    padding-bottom: 30%;
+}
+
+.cercle-animation{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.animation{
+    position: absolute;
+    animation-name: fleche-qui-bouge; 
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /*
+    animation: name duration timing-function delay iteration-count direction
+    */
+}
+
+/* 
+keyframe est là pour déclarer les images clef de l'animation de l'élément, de 0% à 100% du temps déclaré pour l'animation 
+à chaque image clef, on défini des transformation ou des placement dans la page, l'animation "produit" les "images" intervale pour 
+aller d'un état à l'autre
+*/
+
+@keyframes fleche-qui-bouge {
+    0%{
+        transform: rotate(0deg);
+        left: 0%;
+        top: 0%;
+    }
+    20%{
+        transform: rotate(90deg);
+        left: 80%;
+        top: 50%;
+    }
+    80%{
+        transform: rotate(-90deg);
+        left: 20%;
+        top: 50%;
+    }
+    100%{
+        transform: rotate(0deg);
+        left: 0%;
+        top: 0%;
+    }
+}
+
+.click-change{
+    transition: transform 1s;
+}
+
+.flip{
+    transform: rotateY(180deg);
+}
