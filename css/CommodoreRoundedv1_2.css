@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CommodoreRoundedv1_2';
+    src: url('../fonts/CommodoreRoundedv1_2.eot');
+    src: url('../fonts/CommodoreRoundedv1_2.eot') format('embedded-opentype'),
+         url('../fonts/CommodoreRoundedv1_2.woff2') format('woff2'),
+         url('../fonts/CommodoreRoundedv1_2.woff') format('woff'),
+         url('../fonts/CommodoreRoundedv1_2.ttf') format('truetype'),
+         url('../fonts/CommodoreRoundedv1_2.svg#CommodoreRoundedv1_2') format('svg');
+}
